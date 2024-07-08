@@ -14,7 +14,7 @@ const quotes = [
   {
     quote: "Code is like humor. When you have to explain it, it’s bad.",
     source: "Cory House",
-    citation: "Twitter",
+    citation: "",
     year: "2012",
     topic: "Programming Humor"
   },
@@ -42,7 +42,7 @@ const quotes = [
   {
     quote: "Programming isn't about what you know; it's about what you can figure out.",
     source: "Chris Pine",
-    citation: "Learn to Program",
+    citation: "",
     year: "2006",
     topic: "Learning Programming"
   }
