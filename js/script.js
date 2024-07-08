@@ -15,36 +15,36 @@ const quotes = [
   {
     quote: "Code is like humor. When you have to explain it, it's bad.",
     source: "Cory House",
-    citation: "",
-    year: "2012",
+    citation: null,
+    year: 2012,
     topic: "Programming Humor"
   },
   {
     quote: "The best way to predict the future is to invent it.",
     source: "Alan Kay",
     citation: "Speech at Xerox PARC",
-    year: "1971",
+    year: 1971,
     topic: "Innovation"
   },
   {
     quote: "First, solve the problem. Then, write the code.",
     source: "John Johnson",
     citation: "Programming Pearls",
-    year: "1990",
+    year: 1990,
     topic: "Problem Solving"
   },
   {
     quote: "If you think it's simple, then you have misunderstood the problem.",
     source: "Bjarne Stroustrup",
     citation: "The C++ Programming Language",
-    year: "1986",
+    year: 1986,
     topic: "Software Complexity"
   },
   {
     quote: "Programming isn't about what you know; it's about what you can figure out.",
     source: "Chris Pine",
-    citation: "",
-    year: "2006",
+    citation: null,
+    year: 2006,
     topic: "Learning Programming"
   }
 ];
@@ -55,7 +55,6 @@ const quotes = [
  */
 const colors = [
   'orange',
-  'black',
   'blue',
   'green',
   'purple',
@@ -65,7 +64,8 @@ const colors = [
   'pink',
   'teal',
   'gray',
-  'cyan'
+  'cyan',
+  'gold'
 ];
 
 /**
@@ -122,8 +122,7 @@ const printQuote = () => {
   // Construct HTML markup for displaying the quote
   let html = `
     <p class="quote">${randomQuote.quote}</p>
-    <p class="source">${randomQuote.source}
-  `;
+    <p class="source">${randomQuote.source}`;
 
   // Add citation span if citation is available in the quote object
   if (randomQuote.citation) {
