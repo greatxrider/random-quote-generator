@@ -53,3 +53,7 @@ The project files include:
 
 - This project was created as part of a learning process to reinforce fundamental JavaScript concepts.
 - Feel free to customize and expand upon the project as you develop your skills further.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
