@@ -7,9 +7,10 @@ project 1 - A Random Quote Generator
 // Check the "Project Resources" section of the project instructions
 // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
-/*** 
- * `quotes` array 
-***/
+/**
+ * Array containing quotes with properties: quote, source, citation, year, topic.
+ * @type {Array<object>}
+ */
 const quotes = [
   {
     quote: "Code is like humor. When you have to explain it, it's bad.",
@@ -48,9 +49,10 @@ const quotes = [
   }
 ];
 
-/*** 
- * `colors` array 
-***/
+/**
+ * Array containing color names for generating random background colors.
+ * @type {Array<string>}
+ */
 const colors = [
   'orange',
   'black',
@@ -67,7 +69,7 @@ const colors = [
 ];
 
 /**
- * Generates a random quote from the 'quotes' array.
+ * Generates a random quote object from the 'quotes' array.
  * @returns {object} A random quote object containing 'quote', 'source', 'citation', and 'year'.
  */
 const getRandomQuote = () => {
@@ -79,8 +81,8 @@ const getRandomQuote = () => {
 };
 
 /**
- * Generates a random color from the 'colors' array.
- * @returns {string} A random color name from the array.
+ * Generates a random color name from the 'colors' array.
+ * @returns {string} A random color name.
  */
 const getRandomColor = () => {
   // Generate a random index within the range of the 'colors' array length
@@ -104,9 +106,12 @@ const updateBackgroundColor = () => {
   body.style.backgroundColor = randomColor;
 };
 
-/***
- * `printQuote` function
-***/
+/**
+ * Generates a random quote and updates the HTML to display it.
+ * This function updates the background color, retrieves a random quote object,
+ * constructs HTML markup including quote, source, citation, year, and topic,
+ * and updates the 'quote-box' element in the HTML with the generated markup.
+ */
 const printQuote = () => {
   // Update background color
   updateBackgroundColor();
@@ -130,6 +135,7 @@ const printQuote = () => {
     html += `<span class="year">${randomQuote.year}</span>`;
   }
 
+  // Add topic span if topic is available in the quote object
   if (randomQuote.topic) {
     html += `<span class="topic">${randomQuote.topic}</span>`;
   }
@@ -141,13 +147,14 @@ const printQuote = () => {
   document.getElementById('quote-box').innerHTML = html;
 };
 
-/***
- * `autoRefreshQuote ` function
-***/
+/**
+ * Sets an interval to automatically refresh the displayed quote at regular intervals.
+ * Uses the `printQuote` function to update the quote display every 10 seconds.
+ */
 const autoRefreshQuote = () => {
   setInterval(() => {
     printQuote(); // Call the printQuote function to display a new quote
-  }, 10000); // Set interval to a random time between 10 to 20 seconds
+  }, 10000); // Interval set to 10 seconds (10000 milliseconds)
 }
 
 /***
@@ -156,5 +163,8 @@ const autoRefreshQuote = () => {
 ***/
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
 
-// Initial call to start auto-refreshing quotes
+/**
+ * Initializes the auto-refreshing of quotes when the page loads.
+ * Calls the `autoRefreshQuote` function to start displaying new quotes automatically.
+ */
 autoRefreshQuote();
