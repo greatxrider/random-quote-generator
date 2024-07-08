@@ -12,7 +12,7 @@ project 1 - A Random Quote Generator
 ***/
 const quotes = [
   {
-    quote: "Code is like humor. When you have to explain it, it’s bad.",
+    quote: "Code is like humor. When you have to explain it, it's bad.",
     source: "Cory House",
     citation: "",
     year: "2012",
@@ -33,7 +33,7 @@ const quotes = [
     topic: "Problem Solving"
   },
   {
-    quote: "If you think it’s simple, then you have misunderstood the problem.",
+    quote: "If you think it's simple, then you have misunderstood the problem.",
     source: "Bjarne Stroustrup",
     citation: "The C++ Programming Language",
     year: "1986",
